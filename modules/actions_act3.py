@@ -1,5 +1,5 @@
 from modules.interaction import click, move_mouse
-from click_locations.act3 import (
+from configuration.click_locations_act3 import (
     act_three_stash,
     act_three_stash_open,
     act_three_waypoint_from_stash,

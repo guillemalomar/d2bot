@@ -2,7 +2,7 @@ import random
 import time
 
 from modules.interaction import click, keyboard_press, control_click, move_mouse
-from click_locations.general import (
+from configuration.click_locations_general import (
     menu_first_char,
     menu_normal_difficulty,
     menu_nightmare_difficulty,

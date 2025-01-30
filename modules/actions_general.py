@@ -1,6 +1,7 @@
 import random
 import time
 
+from configuration.configuration_loot import good_loot
 from modules.interaction import click, keyboard_press, control_click, move_mouse
 from configuration.click_locations_general import (
     menu_first_char,
@@ -8,6 +9,7 @@ from configuration.click_locations_general import (
     menu_nightmare_difficulty,
     menu_hell_difficulty,
     corpse_location,
+    stash_open,
     char_gold_deposit,
     char_gold_deposit_confirm,
     tab1, tab2, tab3, tab4,
@@ -16,6 +18,10 @@ from configuration.click_locations_general import (
     play_button,
 )
 from modules.screen_analyzer import take_screenshot, detect_loot, find_good_loot
+
+found_loot = {}
+for entry in good_loot:
+    found_loot[entry] = 0
 
 def start_game(difficulty):
     click(x=menu_first_char[0], y=menu_first_char[1])
@@ -31,6 +37,13 @@ def start_game(difficulty):
 def retrieve_corpse():
     move_mouse(corpse_location[0], corpse_location[1])
     click(time_low=1, time_high=2)
+
+def save_in_stash():
+    move_mouse(stash_open[0], stash_open[1])
+    click(time_low=1, time_high=2)
+    save_gold()
+    save_inventory()
+    close_stash()
 
 def save_gold():
     click(x=tab2[0], y=tab2[1])
@@ -68,6 +81,7 @@ def pickup_loot():
         found_good_loot = find_good_loot(loot_locations)
         if found_good_loot:
             click(x=found_good_loot[0]["x"], y=found_good_loot[0]["y"])
+            found_loot[found_good_loot[0]["name"]] += 1
         else:
             done_with_loot = True
 

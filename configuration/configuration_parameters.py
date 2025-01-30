@@ -4,4 +4,5 @@ screen_size = {
 }
 mode = "travincal"
 difficulty = "normal"
-max_iterations = 1
+max_iterations_travincal = 1
+max_iterations_anya = 1

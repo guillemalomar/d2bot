@@ -23,6 +23,6 @@ def go_to_anya_portal_and_back():
     click()
     check_if_started()
 
-def go_to_anya():
+def go_to_anya_and_check_her_stuff():
     move_mouse(anya_from_portal[0], anya_from_portal[1])
     click()

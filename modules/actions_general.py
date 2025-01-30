@@ -1,7 +1,7 @@
 import random
 import time
 
-from configuration.configuration_loot import good_loot
+from configuration.configuration_loot_act3 import good_loot
 from modules.interaction import click, keyboard_press, control_click, move_mouse
 from configuration.click_locations_general import (
     menu_first_char,

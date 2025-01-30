@@ -1,7 +1,7 @@
 import mss
 import pytesseract
 from PIL import Image
-from configuration.configuration_loot import good_loot
+from configuration.configuration_loot_act3 import good_loot
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\<path-to-your-tesseract>\Tesseract-OCR\tesseract.exe'
 

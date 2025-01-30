@@ -2,12 +2,13 @@ import mss
 import pytesseract
 from PIL import Image
 from configuration.configuration_loot_act3 import good_loot
+from configuration.configuration_parameters import mode
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\<path-to-your-tesseract>\Tesseract-OCR\tesseract.exe'
 
 def take_screenshot():
     with mss.mss() as sct:
-        filename = sct.shot(output='screenshots/travincal_loot.png')
+        filename = sct.shot(output=f'screenshots/{mode}_loot.png')
     return filename
 
 def detect_loot(filename):
@@ -15,7 +16,7 @@ def detect_loot(filename):
     data = pytesseract.image_to_data(img, output_type='dict')
     return data['text']
 
-def find_good_loot(loot_locations):
+def find_floor_good_loot(loot_locations):
     found_good_loot = []
     for i in range(len(loot_locations["level"])):
         if loot_locations["text"][i] != "":
@@ -28,3 +29,8 @@ def find_good_loot(loot_locations):
                     }
                 )
     return found_good_loot
+
+def find_vendor_good_loot(loot_locations):
+    if all([loot in loot_locations["text"] for loot in good_loot]):
+        return True
+    return False

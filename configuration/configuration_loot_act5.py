@@ -5,8 +5,8 @@ good_loot = [
     ("+3 TO MARTIAL ARTS", "+20% INCREASED ATTACK SPEED"),
     ("+3 TO MARTIAL ARTS", "+3 TO LIGHTNING SENTRY"),
     ("+3 TO VENOM", "+2 TO ASSASSIN SKILLS"),
-    ("COLD RESIST +40%", "+40 TO LIFE"),
-    ("LIGHTNING RESIST +40%", "+40 TO LIFE"),
-    ("+30% TO ", "+100 TO LIFE"),
+    ("COLD RESIST +40%", "+40% FASTER RUN/WALK"),
+    ("LIGHTNING RESIST +40%", "+40% FASTER RUN/WALK"),
+    ("RESIST +30%", "+100 TO LIFE"),
 ]
 

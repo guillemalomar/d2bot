@@ -1,3 +1,4 @@
+from modules.actions_general import found_loot
 from modules.interaction import click, move_mouse, check_if_started
 from configuration.click_locations_act5 import (
     stash_from_start,
@@ -6,6 +7,8 @@ from configuration.click_locations_act5 import (
     anya_portal_back,
     anya_from_portal,
 )
+from modules.screen_analyzer import take_screenshot, detect_loot, find_vendor_good_loot
+
 
 def go_to_stash_from_start():
     for location in stash_from_start:
@@ -26,3 +29,9 @@ def go_to_anya_portal_and_back():
 def go_to_anya_and_check_her_stuff():
     move_mouse(anya_from_portal[0], anya_from_portal[1])
     click()
+    for x_position in range(150, 1500, 80):  # placeholder, needs to be calculated
+        for y_position in range(150, 1500, 80):  # placeholder, needs to be calculated
+            screenshot = take_screenshot()
+            loot_locations = detect_loot(screenshot)
+            if find_vendor_good_loot(loot_locations):
+                click(x=x_position, y=y_position, button="right")

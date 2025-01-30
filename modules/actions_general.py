@@ -17,7 +17,7 @@ from configuration.click_locations_general import (
     exit_location,
     play_button,
 )
-from modules.screen_analyzer import take_screenshot, detect_loot, find_good_loot
+from modules.screen_analyzer import take_screenshot, detect_loot, find_floor_good_loot
 
 found_loot = {}
 for entry in good_loot:
@@ -78,7 +78,7 @@ def pickup_loot():
     while not done_with_loot:
         screenshot = take_screenshot()
         loot_locations = detect_loot(screenshot)
-        found_good_loot = find_good_loot(loot_locations)
+        found_good_loot = find_floor_good_loot(loot_locations)
         if found_good_loot:
             click(x=found_good_loot[0]["x"], y=found_good_loot[0]["y"])
             found_loot[found_good_loot[0]["name"]] += 1

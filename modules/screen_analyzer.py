@@ -39,6 +39,4 @@ def find_floor_good_loot(loot_locations):
     return found_good_loot
 
 def find_vendor_good_loot(loot_locations):
-    if all([loot in loot_locations["text"] for loot in good_loot]):
-        return True
-    return False
+    return all([loot in loot_locations["text"] for loot in good_loot])

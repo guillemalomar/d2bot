@@ -1,6 +1,5 @@
-from modules.actions_general import found_loot
 from modules.interaction import click, move_mouse, check_if_started
-from configuration.click_locations_act5 import (
+from configuration.click_locations_mode2 import (
     stash_from_start,
     anya_portal_from_stash,
     anya_portal_open,

@@ -1,15 +1,11 @@
 import random
 import time
 
-import pyautogui
-
-from configuration.configuration_loot_act3 import good_loot
+from configuration.configuration_loot_mode1 import good_loot
 from modules.interaction import click, keyboard_press, control_click, move_mouse
 from configuration.click_locations_general import (
     menu_first_char,
-    menu_normal_difficulty,
-    menu_nightmare_difficulty,
-    menu_hell_difficulty,
+    menu_difficulty_location,
     corpse_location,
     stash_open,
     char_gold_deposit,
@@ -28,13 +24,7 @@ for entry in good_loot:
 def start_game(difficulty):
     click(x=menu_first_char[0], y=menu_first_char[1])
     click(x=play_button[0], y=play_button[1])
-    match difficulty:
-        case "normal":
-            click(x=menu_normal_difficulty[0], y=menu_normal_difficulty[1])
-        case "nightmare":
-            click(x=menu_nightmare_difficulty[0], y=menu_nightmare_difficulty[1])
-        case "hell":
-            click(x=menu_hell_difficulty[0], y=menu_hell_difficulty[1])
+    click(x=menu_difficulty_location[difficulty][0], y=menu_difficulty_location[difficulty][1])
 
 def retrieve_corpse():
     move_mouse(corpse_location[0], corpse_location[1])
@@ -76,7 +66,7 @@ def kill():
     keyboard_press("f2")  # teleport
 
 def pickup_loot():
-    pyautogui.press('alt')
+    keyboard_press(key_to_press="alt")
     done_with_loot = False
     while not done_with_loot:
         screenshot = take_screenshot()
@@ -89,7 +79,7 @@ def pickup_loot():
             found_loot[found_good_loot[0]["name"]] += 1
         else:
             done_with_loot = True
-    pyautogui.press('alt')
+    keyboard_press(key_to_press="alt")
 
 def go_to_main_screen():
     keyboard_press("esc")

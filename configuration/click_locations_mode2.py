@@ -1,3 +1,4 @@
+# still needs to be calculated
 stash_from_start = [
     (0, 0)
 ]

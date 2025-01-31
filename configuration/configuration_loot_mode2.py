@@ -9,4 +9,3 @@ good_loot = [
     ("LIGHTNING RESIST +40%", "+40% FASTER RUN/WALK"),
     ("RESIST +30%", "+100 TO LIFE"),
 ]
-

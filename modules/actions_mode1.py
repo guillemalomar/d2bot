@@ -1,5 +1,5 @@
-from modules.interaction import click, move_mouse
-from configuration.click_locations_act3 import (
+from modules.interaction import click, move_mouse, keyboard_press
+from configuration.click_locations_mode1 import (
     act_three_stash,
     act_three_waypoint_from_stash,
     travincal_waypoint_click,
@@ -16,5 +16,6 @@ def go_to_travincal():
     click(x=travincal_waypoint_click[0], y=travincal_waypoint_click[1])
 
 def go_to_council():
+    keyboard_press("f2")  # teleport
     for location in travincal_teleports:
         click(x=location[0], y=location[1], time_low=1, time_high=2, button="right")

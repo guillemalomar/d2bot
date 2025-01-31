@@ -1,5 +1,10 @@
 menu_first_char = (2770, 260)
 play_button = (1350, 1670)
+menu_difficulty_location = {
+    "normal": (1600, 810),
+    "nightmare": (1600, 920),
+    "hell": (1600, 1040),
+}
 menu_normal_difficulty = (1600, 810)
 menu_nightmare_difficulty = (1600, 920)
 menu_hell_difficulty = (1600, 1040)

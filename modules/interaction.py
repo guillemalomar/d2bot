@@ -32,4 +32,4 @@ def check_if_started():
         if pyautogui.pixel(100, 100) != (0, 0, 0):
             return
         current_try += 1
-    exit(404)
+    exit(500)

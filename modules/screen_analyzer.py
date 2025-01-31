@@ -1,15 +1,16 @@
 import mss
 import pytesseract
 from PIL import Image
-from configuration.configuration_loot_act3 import good_loot
+from configuration.configuration_loot_mode1 import good_loot
+from configuration.configuration_parameters import screen_size
 
 pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files (x86)/Tesseract-OCR/tesseract.exe'
 
 def take_screenshot():
     with mss.mss() as sct:
         # The screen part to capture
-        monitor = {"top": 0, "left": 0, "width": 3180, "height": 1840}
-        output = "sct-{top}x{left}_{width}x{height}.png".format(**monitor)
+        monitor = {"top": 50, "left": 0, "width": screen_size["width"], "height": screen_size["height"]}
+        output = "screenshots/sct-{top}x{left}_{width}x{height}.png".format(**monitor)
 
         # Grab the data
         sct_img = sct.grab(monitor)

@@ -2,7 +2,7 @@ import mss
 import pytesseract
 from PIL import Image
 from configuration.configuration_loot_mode1 import good_loot
-from configuration.configuration_parameters import screen_size
+from configuration import screen_size
 
 pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files (x86)/Tesseract-OCR/tesseract.exe'
 

@@ -5,15 +5,12 @@ menu_difficulty_location = {
     "nightmare": (1600, 920),
     "hell": (1600, 1040),
 }
-menu_normal_difficulty = (1600, 810)
-menu_nightmare_difficulty = (1600, 920)
-menu_hell_difficulty = (1600, 1040)
 corpse_location = (1665, 962)
 stash_open = (1135, 730)
-tab1 = (368, 400)
-tab2 = (564, 400)
-tab3 = (796, 400)
-tab4 = (999, 400)
+tab1 = (360, 400)
+tab2 = (560, 400)
+tab3 = (760, 400)
+tab4 = (960, 400)
 char_gold_deposit = (2413, 1375)
 char_gold_deposit_confirm = (1360, 1034)
 inventory_slots = [

@@ -1,8 +1,8 @@
-from configuration import configuration_parameters
+from configuration import difficulty
 from modules import actions_general, actions_mode1, interaction
 
 def mode1_iteration():
-    actions_general.start_game(configuration_parameters.difficulty)
+    actions_general.start_game(difficulty)
     interaction.check_if_started()
     actions_general.retrieve_corpse()
     actions_mode1.go_to_stash()

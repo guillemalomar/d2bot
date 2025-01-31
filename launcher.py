@@ -19,10 +19,10 @@ if __name__ == "__main__":
                 actions_general.save_in_stash()
                 actions_act3.go_to_travincal()
                 interaction.check_if_started()
-                actions_act3.travincal_teleports()
+                actions_act3.go_to_council()
                 actions_general.kill()
                 actions_general.pickup_loot()
-                actions_general.go_to_main_screen()
+                # actions_general.go_to_main_screen()
             except Exception:
                 print("Error found, restarting travincal")
             print(f"Found loot: \n {found_loot}")

@@ -1,6 +1,6 @@
 screen_size = {
-    "width": 0,
-    "height": 0
+    "width": 3200,
+    "height": 1800
 }
 mode = "travincal"
 difficulty = "normal"

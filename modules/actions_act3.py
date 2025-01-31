@@ -17,4 +17,4 @@ def go_to_travincal():
 
 def go_to_council():
     for location in travincal_teleports:
-        click(x=location[0], y=location[1])
+        click(x=location[0], y=location[1], time_low=1, time_high=2, button="right")

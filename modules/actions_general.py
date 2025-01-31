@@ -1,6 +1,8 @@
 import random
 import time
 
+import pyautogui
+
 from configuration.configuration_loot_act3 import good_loot
 from modules.interaction import click, keyboard_press, control_click, move_mouse
 from configuration.click_locations_general import (
@@ -74,16 +76,20 @@ def kill():
     keyboard_press("f2")  # teleport
 
 def pickup_loot():
+    pyautogui.press('alt')
     done_with_loot = False
     while not done_with_loot:
         screenshot = take_screenshot()
         loot_locations = detect_loot(screenshot)
         found_good_loot = find_floor_good_loot(loot_locations)
         if found_good_loot:
-            click(x=found_good_loot[0]["x"], y=found_good_loot[0]["y"])
+            click(x=found_good_loot[0]["x"], y=found_good_loot[0]["y"], button="right")
+            move_mouse(x=1585, y=841)
+            click()
             found_loot[found_good_loot[0]["name"]] += 1
         else:
             done_with_loot = True
+    pyautogui.press('alt')
 
 def go_to_main_screen():
     keyboard_press("esc")

@@ -9,9 +9,13 @@ act_three_stash = [
 ]
 act_three_waypoint_from_stash = (3160, 1050)
 travincal_waypoint_click = (590, 1220)
-travincal_teleports = [  # test values, need to be calculated
-    (1665, 962),
-    (1665, 962),
-    (1665, 962),
-    (1665, 962),
+travincal_teleports = [
+    (2660, 1200),
+    (2960, 520),
+    (3000, 1000),
+    (3010, 1200),
+    (2900, 320),
+    (2600, 500),
+    (2600, 650),
+    (3020, 1400),
 ]

@@ -1,4 +1,4 @@
-from modules.interaction import click, move_mouse, check_if_started
+from modules.interaction import click, move_mouse, check_if_started, keyboard_press
 from configuration.click_locations_mode2 import (
     stash_from_start,
     anya_portal_from_stash,
@@ -34,3 +34,4 @@ def go_to_anya_and_check_her_stuff():
             loot_locations = detect_loot(screenshot)
             if find_vendor_good_loot(loot_locations):
                 click(x=x_position, y=y_position, button="right")
+    keyboard_press("esc")

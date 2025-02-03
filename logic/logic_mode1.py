@@ -15,3 +15,4 @@ def mode1_iteration():
     actions_general.kill()
     actions_general.pickup_loot()
     actions_general.go_to_main_screen()
+    interaction.check_if_started()

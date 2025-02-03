@@ -12,3 +12,5 @@ def act_5_iteration():
         actions_mode2.go_to_anya_portal_and_back()
         actions_mode2.go_to_anya_and_check_her_stuff()
         current_iterations += 1
+    actions_general.go_to_main_screen()
+    interaction.check_if_started()

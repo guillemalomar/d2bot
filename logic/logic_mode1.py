@@ -11,5 +11,7 @@ def mode1_iteration():
     interaction.check_if_started()
     actions_mode1.go_to_council()
     actions_general.kill()
+    actions_mode1.travincal_last_teleport()
+    actions_general.kill()
     actions_general.pickup_loot()
     actions_general.go_to_main_screen()

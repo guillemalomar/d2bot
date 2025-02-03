@@ -28,11 +28,11 @@ def start_game(difficulty):
 
 def retrieve_corpse():
     move_mouse(corpse_location[0], corpse_location[1])
-    click(time_low=1, time_high=2)
+    click(time_low=1, time_high=1.5)
 
 def save_in_stash():
     move_mouse(stash_open[0], stash_open[1])
-    click(time_low=1, time_high=2)
+    click(time_low=1, time_high=1.5)
     save_gold()
     save_inventory()
     close_stash()
@@ -61,8 +61,9 @@ def kill():
     keyboard_press("f1")  # hammers
     current_attacks = 0
     while current_attacks < 10:
-        click(button="right")
+        click(x=950, y=586, button="right")
         time.sleep(random.uniform(1, 1.5))
+        current_attacks += 1
     keyboard_press("f2")  # teleport
 
 def pickup_loot():

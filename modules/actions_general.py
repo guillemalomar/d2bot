@@ -75,7 +75,7 @@ def pickup_loot():
         found_good_loot = find_floor_good_loot(loot_locations)
         if found_good_loot:
             click(x=found_good_loot[0]["x"], y=found_good_loot[0]["y"], button="right")
-            move_mouse(x=1585, y=841)
+            move_mouse(x=1024, y=635)
             click()
             found_loot[found_good_loot[0]["name"]] += 1
         else:

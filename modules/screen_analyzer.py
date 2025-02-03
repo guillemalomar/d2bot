@@ -10,7 +10,7 @@ def take_screenshot():
     with mss.mss() as sct:
         # The screen part to capture
         monitor = {"top": 50, "left": 0, "width": screen_size["width"], "height": screen_size["height"]}
-        output = "screenshots/sct-{top}x{left}_{width}x{height}.png".format(**monitor)
+        output = "sct-{top}x{left}_{width}x{height}.png".format(**monitor)
 
         # Grab the data
         sct_img = sct.grab(monitor)
